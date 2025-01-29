@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logoblanco.png" alt="Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="certificaciones.html">Certificaciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="porfolio.html">Porfolio</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sección de Titulaciones -->
+<section id="titulaciones" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Titulaciones y Certificaciones</h2>
+        <div class="timeline">
+            <!-- Bloque 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Título en Diseño Gráfico Digital</h3>
+                    <p>ORT Argentina, 2024.</p>
+                    <button class="btn btn-secondary ver-pdf" data-pdf="E:\hevieri\Porfolio\cv\pdf\tituloentramite.pdf">Ver Certificado</button>
+                </div>
+            </div>
+
+            <!-- Bloque 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso: Javascript desde cero</h3>
+                    <p>4 de abril de 2023</p>
+                    <button class="btn btn-secondary ver-pdf" data-pdf="E:\hevieri\Porfolio\cv\pdf\jsitcero.html">Ver Certificado</button>
+                </div>
+            </div>
+
+            <!-- Bloque 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso: Wordpress</h3>
+                    <p>17 de diciembre de 2022</p>
+                    <button class="btn btn-secondary ver-pdf" data-pdf="E:\hevieri\Porfolio\cv\pdf\wordpressit.html">Ver Certificado</button>
+                </div>
+            </div>
+
+            <!-- Bloque 4 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso: Maquetador Web: HTML 5 y CSS3</h3>
+                    <p>12 de julio de 2022</p>
+                    <button class="btn btn-secondary ver-pdf" data-pdf="E:\hevieri\Porfolio\cv\pdf\maqueadorwebhtmlcssit.html">Ver Certificado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal para visualizar PDFs -->
+<div class="modal fade" id="modalPDF" tabindex="-1" role="dialog" aria-labelledby="modalPDFLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPDFLabel">Certificado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="iframePDF" src="" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="container">
+        <div class="social-icons mb-2">
+            <a href="https://wa.me/tu-número" target="_blank" class="text-white mx-2"><i class="fab fa-whatsapp fa-2x"></i></a>
+            <a href="mailto:tu-correo@gmail.com" class="text-white mx-2"><i class="fas fa-envelope fa-2x"></i></a>
+            <a href="https://www.behance.net/akirehevieri?tracking_source=search_projects%7Chevieri" target="_blank" class="text-white mx-2"><i class="fab fa-behance fa-2x"></i></a>
+            <a href="https://github.com/hevieri" target="_blank" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.instagram.com/tu-perfil" target="_blank" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>&copy; 2024 Porfolio Erika Helfenstern.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Función para mostrar el PDF en el modal
+    document.querySelectorAll('.ver-pdf').forEach(button => {
+        button.addEventListener('click', function() {
+            const pdfSrc = this.getAttribute('data-pdf');
+            const iframe = document.getElementById('iframePDF');
+            iframe.src = pdfSrc;
+            $('#modalPDF').modal('show');
+        });
+    });
+</script>
+</body>
+</html>
