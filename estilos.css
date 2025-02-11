@@ -22,6 +22,12 @@ body {
     color: white; /* Blanco puro */
 }
 
+#diseno{
+    text-align: center;
+    color: #1565C0;
+}
+
+
 /* Títulos */
 h1 {
     text-align: center;
