@@ -7,8 +7,6 @@
 
 
 body {
-    margin: 0;
-    padding: 0;
     padding-top: 80px; /* Ajusta según la altura de tu navbar */
     display: flex;
     flex-direction: column;
@@ -82,14 +80,14 @@ img .hero-section{
 /* Sobre Mi*/
 #sobre-mi h2 {
     border: 2px solid rgb(255, 255, 255); /* Borde blanco */
-    padding: 10px; /* Espaciado interno */
+    
     background-color: rgba(117, 170, 214, 0.5); /* Fondo semitransparente */
     border-radius: 5px; /* Bordes redondeados */
     font-size: 2rem;
     font-weight: 600;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); /* Sombra del texto */
-    margin-bottom: 1.5em; /* Reducido el margen inferior */
+    
 }
 
 #sobre-mi h3 {
@@ -103,7 +101,7 @@ img .hero-section{
     color: #333;
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 15px;
+    
 }
 
 
@@ -127,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Habilidades */
 #habilidades {
-    padding: 50px 0;
+   
     text-align: center;
     
 }
@@ -136,13 +134,13 @@ h1, h2, h3, h4, h5, h6 {
 #habilidades h2 {
     
     border: 2px solid rgb(255, 255, 255); /* Borde blanco */
-    padding: 8px 15px; /* Menos padding para ajustar el tamaño */
+   
     background-color: rgba(117, 170, 214, 0.5); /* Fondo semitransparente */
     border-radius: 5px; /* Bordes redondeados */
     font-size: 2rem; /* Tamaño de la fuente */
     font-weight: 600;
     color: white;
-    margin-bottom: 1.5em; /* Reducido el margen inferior */
+   
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); /* Sombra del texto */
 }
 
